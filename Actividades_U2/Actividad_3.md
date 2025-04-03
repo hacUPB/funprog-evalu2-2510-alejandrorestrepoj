@@ -2,7 +2,7 @@
 
 Responde si los siguientes enunciados representan un algoritmo. Justifica la respuesta:
 
-1. Una página web. - Si. 
+1. Una página web. - No.
 2. Una receta para hacer un pastel, donde se indican ingredientes y pasos a seguir. - Si. 
 3. "Piensa en un número y multiplícalo por otro". - Si. 
 4. Un manual de instrucciones para armar un mueble, con pasos detallados y un orden claro. - Si.
