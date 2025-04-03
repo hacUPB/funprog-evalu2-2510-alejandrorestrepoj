@@ -81,9 +81,10 @@ Sino horas_trabajadas > 46
     Fin si
 Si horas_trabajadas > 41
     Escribir "Su pago sera el doble."
-    Fin si
     horas_extra = horas_trabajadas - 40
     pago_extra1 = horas_extra * 2
+    Escribir"Su pago extra sera: ", pago_extra1
+    Fin si
 Si
     Escribir "Su pago sera normal."
     Fin si
