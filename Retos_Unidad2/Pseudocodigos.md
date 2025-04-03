@@ -49,15 +49,15 @@ Escribir "Insertar la fecha actual en el siguiente orden: dia, mes, año"
 Leer dia, mes, año.
 Escribir "Insertar su fecha de nacimiento: adia, ames, aaño"
 Leer adia, ames, aaño.
-Si dia = diaa, mes = ames
+Si dia = diaa y mes = ames
     Escribir "¡Feliz cumpleaños!"
-    Edad = aaño - año
+    Edad = año - aaño
     Fin si
-Si (mes < ames) o (mes = ames y dia < adia)
-    Edad = aaño - año - 1
+Sino (mes < ames) o (mes = ames y dia < adia)
+    Edad = año - aaño - 1
     Fin si
-Si
-    Edad = aaño - año
+Sino
+    Edad = año - aaño
     Fin si
 Imprimir Edad
 Escribir "Tu edad actual es: ", Edad
@@ -73,13 +73,17 @@ Leer horas_trabajadas
 Si horas_trabajadas > 50
     Escribir "No esta permitido trabajar mas de 50 horas."
     Fin si
-Si horas_trabajadas > 46
-    Escribir "Su pago sera el triple."
+Sino horas_trabajadas > 46
+    horas_extra = horas_trabajadas - 40
+    Escribir "Su pago entre las horas 41-45 sera el doble."
+    horas_extradoble = 
+    pago_extra1 = horas_extra * 2
     Fin si
 Si horas_trabajadas > 41
-
     Escribir "Su pago sera el doble."
     Fin si
+    horas_extra = horas_trabajadas - 40
+    pago_extra1 = horas_extra * 2
 Si
     Escribir "Su pago sera normal."
     Fin si
@@ -93,13 +97,11 @@ Inicio
 Escribir "Insertar cuantos valores N piensa introducir."
 Leer N
 Escribir "Insertar C:"
-N = N - 1
-Repetir N veces.
-Si N = 0
 Leer valores.
 cero = 0
 may_cero = 0
 men_cero = 0
+Si N > 0
     Si C = 0
         cero = cero + 1
         Leer cero
@@ -110,6 +112,7 @@ men_cero = 0
     Si C = men_cero
         men_cero = men_cero + 1
         Fin si
+    N = N - 1
 Escribir "La cantidad de valores igual a cero son: ", cero
 Escribir "La cantidad de valores menores a cero son: ", men_cero
 Escribir "La cantidad de valores mayores a cero son: ", may_cero
@@ -144,13 +147,13 @@ Si precio_total >= 200
     precio_total = precio_total - D
     Imprimir precio_total
     Fin si
-Si precio_total > 100
+Sino precio_total > 100
     D = precio_total * 0.12
     Imprimir D
     precio_total = precio_total - D
     Imprimir precio_total
     Fin si
-Si precio_total > 0
+Sino precio_total > 0
     D = precio_total * 0.1
     Imprimir D
     precio_total = precio_total - D
@@ -169,12 +172,12 @@ Escribir "Insertar el valor de X que queremos calcular."
 Leer X
 Escribir "Insertar el valor de N repeticiones"
 Leer N
-sin_x = 0
+e^x = 0
 Si N > 0
-    Termino = ((-1)^N * x^(2*N + 1)) / Factorial(2*N + 1)
-    sin_x = sin_x + Termino
+    Termino = x^N / Factorial(N)
+    e^x = e^x + Termino
     Imprimir Termino
-    N - 1
+    N = N - 1 
 Fin si 
 Imprimir "La aproximacion de x con N: ", N, "terminos es: ", X 
 Fin
@@ -188,12 +191,12 @@ Escribir "Insertar el valor de X que queremos calcular."
 Leer X
 Escribir "Insertar el valor de N repeticiones"
 Leer N
-e^x = 0
+sin_x = 0
 Si N > 0
-    Termino = x^N / Factorial(N)
-    e^x = e^x + Termino
+    Termino = ((-1)^N * x^(2*N + 1)) / Factorial(2*N + 1)
+    sin_x = sin_x + Termino
     Imprimir Termino
-    N - 1 
+    N = N - 1
 Fin si 
 Imprimir "La aproximacion de x con N: ", N, "terminos es: ", X 
 Fin
